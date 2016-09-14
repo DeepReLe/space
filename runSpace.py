@@ -8,8 +8,10 @@ def space():
 	with open(CSVfileName) as csvfile:
 		reader = csv.DictReader(csvfile)
 
+	return reader
 
-space
+CSVObject = space()
+
 
 
 
