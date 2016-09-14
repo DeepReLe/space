@@ -4,6 +4,7 @@ import breeze.linalg._
 import breeze.numerics._
 import breeze.math._
 import breeze.stats._
+import java.io._
 /**
  * Created by Brian on 2/13/15.
  */
@@ -114,6 +115,10 @@ def toy_example_recursive(num: Int, force_vector: DenseVector[Double]) {
     val MyFile = new java.io.File(FileName)
     csvwrite(MyFile, feasible_activations)
     println("Saved" + FileName)
+    val pw = new PrintWriter(new File("output/filename.txt"))
+    pw.write(FileName)
+    pw.close
+
   }
 
 
